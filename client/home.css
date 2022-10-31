@@ -1,0 +1,20 @@
+/* Page-sizing */
+body {
+    width: 100vw;
+}
+
+/* Header */
+
+header {
+    background-color: rgb(255, 0, 0);
+    height: 125px;
+    width: 200px;
+}
+
+.title {
+    color: red;
+}
+
+
+/* Body */
+/* Styles are not showing on html page check the connection */
