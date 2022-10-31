@@ -1,18 +1,26 @@
 /* Page-sizing */
 body {
-    width: 100vw;
+    /* width: 100vw; */
+    max-width: 1400px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
 /* Header */
 
 header {
-    background-color: rgb(255, 0, 0);
-    height: 125px;
-    width: 200px;
+    background-color: #005C69;
+    height: 100px;
+    width: 99vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .title {
-    color: red;
+    color: white;
 }
 
 
