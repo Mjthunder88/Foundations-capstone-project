@@ -12,5 +12,9 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
 
 
 module.exports = {
-   
+   getListings: (req, res) => {
+    sequelize.query()
+   },
+   CreateTable: (req, res) => {
+   }
 }
