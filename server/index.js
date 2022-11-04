@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
-const cors = require('cors')
 const app = express()
+const path = require('path')
 // the required information so that my computer can read axios requests and translate that all from the front end -
 //to the back end -- then to the database and back 
 
@@ -10,19 +10,25 @@ const {getListings} = require('./controller')
 // functions from my controller destructured 
 //so that I can reference them in my endpoints
 
-
-
-app.use(express.json)
-app.use(cors())
-
-
-app.get('/listings', getListings)
+app.use(express.json())
 
 
 // endpoints go here
+app.get('/listings', getListings)
 
 
 
+// files being serverd with endpoints
+app.get('/', (req, res) => {
+    console.log(path.join(__dirname, "../client/home.hmtl"))
+    res.sendFile(path.join(__dirname, "../client/home.hmtl"))
+})
+app.get('/styles', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/home.css"))
+})
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/home.js"))
+})
 
 
 
