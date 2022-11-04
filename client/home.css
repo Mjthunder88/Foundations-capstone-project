@@ -21,6 +21,23 @@ header {
 
 .title {
     color: white;
+    border-bottom: solid black; 
+    padding-bottom: 10px;
+}
+
+nav {
+    color: white;
+}
+
+.nav-links {
+    padding: 5px;
+    transition: 1s;
+}
+
+.nav-links:hover {
+    background-color: black;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
