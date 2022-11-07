@@ -44,5 +44,11 @@ module.exports = {
     sequelize.query(`
         SELECT * FROM listings
     `)
+    .then(dbRes => {
+        res.status(200).send(dbRes[0])
+    })
+    .catch((error) => {
+    res.status(404).send(error)  
+    })
    }
 }
