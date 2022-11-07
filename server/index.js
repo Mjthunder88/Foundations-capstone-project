@@ -20,7 +20,6 @@ app.get('/listings', getListings)
 
 // files being serverd with endpoints
 app.get('/', (req, res) => {
-    // console.log(path.join(__dirname, "../client/home.hmtl"))
     res.sendFile(path.join(__dirname, "../client/home.html"))
 })
 app.get('/styles', (req, res) => {
