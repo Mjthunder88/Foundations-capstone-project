@@ -42,4 +42,13 @@ nav {
 
 
 /* Body */
-/* Styles are not showing on html page check the connection */
+
+main {
+    margin-left: 500px;
+    margin-right: 500px;
+}
+.listings-container {
+   background-color: aquamarine;
+   height: auto;
+   width: 500px;
+}
