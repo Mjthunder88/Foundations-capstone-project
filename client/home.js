@@ -12,7 +12,7 @@ function allListings () {
             let listingCard = listings[i]
             console.log(listingCard)
             let details = document.createElement('p')
-            details.textContent = listingCard.make + ' ' + listingCard.model + ' ' + listingCard.year + ' ' + listingCard.mileage 
+            details.textContent = listingCard.make + ' ' + listingCard.model + ' ' + listingCard.year + ' ' + listingCard.mileage + ' ' + listingCard.price + ' ' + listingCard.vin
             console.log(details)
             listingContainer.appendChild(details)
         }
