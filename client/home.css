@@ -6,6 +6,7 @@ body {
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 /* Header */
@@ -34,6 +35,14 @@ nav {
     padding: 5px;
     color: white;
     transition: 1s;
+    text-decoration: none;
+
+}
+.nav-links:visited {
+    padding: 5px;
+    color: white;
+    transition: 1s;
+    text-decoration: none;
 
 }
 
@@ -41,6 +50,8 @@ nav {
     background-color: black;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+
 }
 
 
@@ -57,3 +68,34 @@ main {
 }
 
 
+@keyframes slideInFromLeft {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .row-container {  
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 220px;
+  }
+
+  .card {
+    width: 400px;
+  }
+
+
+  /* Footer */
+
+  footer {
+    background-color: #1282A2;
+    height: 100px;
+    width: 98vw;
+    padding: 10px;
+  }
