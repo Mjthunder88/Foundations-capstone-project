@@ -28,6 +28,12 @@ app.get('/styles', (req, res) => {
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, "../client/home.js"))
 })
+app.get('/profile', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/profile.html"))
+})
+app.get('/gallery', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/gallery.html"))
+})
 
 
 
