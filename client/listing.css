@@ -1,4 +1,3 @@
-/* Page-sizing */
 body {
     font-family: 'Philosopher', sans-serif;
     font-family: 'Prompt', sans-serif;
@@ -20,7 +19,6 @@ header {
     overflow-x: hidden;
     position: sticky;
     top: 0px;
-    z-index: 1;
 }
 
 .title {
@@ -52,67 +50,25 @@ header {
 
 }
 
-
-/* Body */
-
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 99vw;
     height: auto;
-
+    width: 100vw;
 }
 
-
-@keyframes slideInFromLeft {
-    from {
-      transform: translateY(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  
-  .row-container {  
-    /* This section calls the slideInFromLeft animation we defined above */
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    padding: 30px;
+.create-container {
+    height: 400px;
+    width: 400px;
+    border: solid 2px;
     display: flex;
-    justify-content: space-around;
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
-
-  .card {
-    width: 500px;
-    border: solid black 1px;
+    justify-content: center;
     padding: 10px;
-    margin: 15px;
-  }
-  .offer-btns{
-    position: relative;
-    display: block;
-    color: black;
-    font-size: 14px;
-    text-decoration: none;
-    margin: 30px 0;
-    border: 2px solid #1282A2;
-    padding: 14px 30px;
-    overflow: hidden;
-    transition: 1s all ease;
-    z-index: 0;
-  }
-  .offer-btns:hover{
-    background-color: #1282A2;
-    color: white;
-  }
+    margin-bottom: 110px;
+}
 
-
-  /* Footer */
-
-  footer {
+footer {
     background-color: #1282A2;
     height: 50px;
     width: 100vw;

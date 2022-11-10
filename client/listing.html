@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/listing/style"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Philosopher&family=Prompt&display=swap" rel="stylesheet">
+    <title>Boost Creeps-Listing</title>
+</head>
+<body>
+<header>
+    <h1 class="title">Boost Creeps</h1>
+    <nav class="nav-container">
+        <a class="nav-links" href="/">Home</a>
+        <a class="nav-links" href="/gallery">Gallery</a>
+        <a class="nav-links" href="/profile">Profile</a>
+        <a class="nav-links" href="/listing">Create Listing</a>
+    </nav>
+</header>
+<main>
+    <h2 class="sub-heading">Create Your Listing</h2>
+    <section class="create-container">
+        <form>
+            <label for="make">Make:</label>
+            <select name="make" id="make-dropdown" >
+                <option value="" disabled selected>Select your option</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Lexus">Lexus</option>
+                <option value="Acura">Acura</option>
+                <option value="BMW">BMW</option>
+                <option value="Ford">Ford</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Mercedes">Mercedes</option>
+                <option value="McLaren">McLaren</option>
+                <option value="Aston Martin">Aston Martin</option>
+                <option value="Audi">Audi</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Doge">Doge</option>
+                <option value="Genesis">Gensis</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Chevy">Chevy</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Infiniti">Infiniti</option>
+            </select>
+            <label for="model">Model:</label>
+            <input type="text" placeholder="Enter Here">
+            <label for="year">Year:</label>
+            <input type="number" min="1940" max="2050" step="1" value="2022"/>
+            <label for="mileage">Mileage:</label>
+            <input type="number" min="0" value="0"/>
+            <label for="vin">Vin:</label>
+            <input type="text" placeholder="Enter Here" minlength="17" maxlength="17"/>
+            <label for="color">Color:</label>
+            <input type="text" placeholder="Enter Here" maxlength="255"/>
+            <label for="additional-info">Aditional Info:</label>
+            <input type="text" placeholder="Enter Here" maxlength="255" class="description-box"/>
+        </form>
+    </section>
+
+</main>
+<footer>
+<div>
+    <a></a>
+</div>
+    
+    
+    
+    
+    
+    
+    
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- <script src="/js"></script> -->
+</body>
+</html>

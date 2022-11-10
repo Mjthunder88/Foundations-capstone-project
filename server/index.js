@@ -34,6 +34,12 @@ app.get('/profile', (req, res) => {
 app.get('/gallery', (req, res) => {
     res.sendFile(path.join(__dirname, "../client/gallery.html"))
 })
+app.get('/listing', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/listing.html"))
+})
+app.get('/listing/style', (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/listing.css"))
+})
 
 
 
