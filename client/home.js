@@ -20,7 +20,6 @@ function allListings () {
                 let currentCard = createCard(listings[i])
                 rowDiv.innerHTML += currentCard
                 main.appendChild(rowDiv)
-
             }
         }
         
@@ -41,6 +40,7 @@ function createCard (listing) {
         <ul>Color: ${listing.color}</ul>
         <ul>Vin: ${listing.vin}</ul>
         <p>Additional info: ${listing.additional_info}</p>
+        <button id ="offer-btn" class= "offer-btns"><span>Make An Offer!</span></button>
         </div>
         </div>`
         return listingCard

@@ -3,10 +3,8 @@ body {
     font-family: 'Philosopher', sans-serif;
     font-family: 'Prompt', sans-serif;
     max-width: 1000px;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin:0;
+    padding: 0;
 }
 
 /* Header */
@@ -14,11 +12,12 @@ body {
 header {
     background-color: #1282A2;
     height: 100px;
-    width: 98vw;
+    width: 99vw;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .title {
@@ -62,7 +61,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 99vw;
     height: auto;
 
 }
@@ -83,11 +82,33 @@ main {
     padding: 30px;
     display: flex;
     justify-content: space-around;
-    margin-left: 220px;
+    margin-left: 20px;
+    margin-bottom: 20px;
   }
 
   .card {
-    width: 400px;
+    width: 500px;
+    border: solid black 1px;
+    /* height: 500px; */
+    padding: 10px;
+    margin: 15px;
+  }
+  .offer-btns{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #1282A2;
+    padding: 14px 30px;
+    overflow: hidden;
+    transition: 1s all ease;
+  }
+  .offer-btns:hover{
+    background: #1282A2;
+    z-index: -1;
+    transition: all 0.6s ease;
   }
 
 
@@ -95,7 +116,10 @@ main {
 
   footer {
     background-color: #1282A2;
-    height: 100px;
-    width: 98vw;
+    height: 50px;
+    width: 100vw;
     padding: 10px;
+    position: fixed;
+    bottom: 0px;
+    overflow-x: hidden;
   }
