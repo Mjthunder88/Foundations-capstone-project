@@ -81,10 +81,17 @@ main {
     overflow: hidden;
     transition: 1s all ease;
     z-index: 0;
+    border-radius: 5px;
   }
   .btn:hover{
     background-color: #1282A2;
     color: white;
+  }
+
+  .description-box {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
   }
 
 footer {

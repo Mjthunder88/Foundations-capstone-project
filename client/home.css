@@ -106,6 +106,7 @@ main {
     overflow: hidden;
     transition: 1s all ease;
     z-index: 0;
+    border-radius: 5px;
   }
   .offer-btns:hover{
     background-color: #1282A2;
