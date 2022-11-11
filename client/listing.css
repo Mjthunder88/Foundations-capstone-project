@@ -68,6 +68,24 @@ main {
     margin-bottom: 110px;
 }
 
+.btn{
+    position: relative;
+    display: block;
+    color: black;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 30px 0;
+    border: 2px solid #1282A2;
+    padding: 14px 30px;
+    overflow: hidden;
+    transition: 1s all ease;
+    z-index: 0;
+  }
+  .btn:hover{
+    background-color: #1282A2;
+    color: white;
+  }
+
 footer {
     background-color: #1282A2;
     height: 50px;
