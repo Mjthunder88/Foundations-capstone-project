@@ -61,11 +61,12 @@ main {
 .create-container {
     height: 400px;
     width: 400px;
-    border: solid 2px;
     display: flex;
     justify-content: center;
     padding: 10px;
     margin-bottom: 110px;
+    box-shadow: 3px 4px 4px 4px #1282A2;
+    border-radius: 10px;
 }
 
 .btn{
