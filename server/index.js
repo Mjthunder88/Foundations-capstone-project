@@ -6,7 +6,7 @@ const path = require('path')
 //to the back end -- then to the database and back 
 
 const {PORT} = process.env
-const {getListings} = require('./controller') 
+const {getListings, getMakes} = require('./controller') 
 // functions from my controller destructured 
 //so that I can reference them in my endpoints
 
@@ -15,6 +15,7 @@ app.use(express.json())
 
 // endpoints go here
 app.get('/listings', getListings)
+app.get('/makes', getMakes)
 
 
 

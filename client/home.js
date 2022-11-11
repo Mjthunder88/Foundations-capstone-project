@@ -1,5 +1,6 @@
 let listingContainer = document.getElementById('listings')
 let main = document.querySelector('main')
+let select = document.getElementById('make-dropdown')
 
 function allListings () {
     // event.preventDefault()
@@ -8,7 +9,7 @@ function allListings () {
     axios.get('http://localhost:5002/listings') 
     .then (res => {
         let listings = res.data
-        // console.log(listings)
+        console.log(listings)
         let rowDiv = null
         for (let i = 0; i < listings.length; i++) {
             if (i % 2 === 0) {
@@ -32,8 +33,8 @@ function createCard (listing) {
         let listingCard = `<div class = "card-row">
         <div class = "card">
         <h3>$${listing.price}</h3>
-        <h3>${listing.make}, ${listing.model}</h3>
-        <image src= "${listing.image}" alt="Picture_of_a_car"/>
+        <h3>${listing.make_id}, ${listing.model}</h3>
+        <image src= "${listing.image_url}" alt="Picture_of_a_car"/>
         <h3>Features & Specs</h3>
         <ul>Year: ${listing.year}</ul>
         <ul>Mileage: ${listing.mileage}</ul>
@@ -46,7 +47,22 @@ function createCard (listing) {
         return listingCard
 }
 
+function getMakes () {
+    axios.get('http://localhost:5002/makes')
+    .then(res => {
+        let makes = res.data
+        makes.array.forEach(make => {
+            const option = document.createElement('option')
+            option.setAttribute('value', make['make_id'])
+            option.textContent = make.name
+            select.appendChild(option)
+        });
+
+    })
+    .catch((error) => console.log(error))
+}
 
 
 
+getMakes()
 allListings()
