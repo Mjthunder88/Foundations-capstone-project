@@ -1,6 +1,7 @@
 let listingContainer = document.getElementById('listings')
 let main = document.querySelector('main')
-let select = document.getElementById('make-dropdown')
+let listingForm = document.querySelector('form')
+
 
 function allListings () {
     // event.preventDefault()
@@ -33,7 +34,7 @@ function createCard (listing) {
         let listingCard = `<div class = "card-row">
         <div class = "card">
         <h3>$${listing.price}</h3>
-        <h3>${listing.make_id}, ${listing.model}</h3>
+        <h3>${listing.make}, ${listing.model}</h3>
         <image src= "${listing.image_url}" alt="Picture_of_a_car"/>
         <h3>Features & Specs</h3>
         <ul>Year: ${listing.year}</ul>
@@ -62,7 +63,5 @@ function getMakes () {
     .catch((error) => console.log(error))
 }
 
-
-
-getMakes()
+// getMakes() 
 allListings()

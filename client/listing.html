@@ -51,17 +51,21 @@
                 <option value="Infiniti">Infiniti</option>
             </select>
             <label for="model">Model:</label>
-            <input type="text" placeholder="Enter Here">
+            <input type="text" placeholder="Enter Here" id="model-input">
             <label for="year">Year:</label>
-            <input type="number" min="1940" max="2050" step="1" value="2022"/>
+            <input type="number" min="1940" max="2050" step="1" value="2022" id="year-input"/>
             <label for="mileage">Mileage:</label>
-            <input type="number" min="0" value="0"/>
+            <input type="number" min="0" value="0" id="mileage-input"/>
             <label for="vin">Vin:</label>
-            <input type="text" placeholder="Enter Here" minlength="17" maxlength="17"/>
+            <input type="text" placeholder="Enter Here" minlength="17" maxlength="17" id="vin-input"/>
             <label for="color">Color:</label>
-            <input type="text" placeholder="Enter Here" maxlength="255"/>
+            <input type="text" placeholder="Enter Here" maxlength="255" id="color-input"/>
             <label for="additional-info">Aditional Info:</label>
-            <input type="text" placeholder="Enter Here" maxlength="255" class="description-box"/>
+            <input type="text" placeholder="Enter Here" maxlength="255" class="description-box" id="description-input"/>
+            <label for="price">Price:</label>
+            <input type="number" placeholder="Enter Here" min="0" value="0" id="price-input"/>
+            <label for="image">Image:</label>
+            <input type="text" placeholder="Enter Here" id="image-input"/>
             <button id="form-btn" class="btn">Submit</button>
         </form>
     </section>
@@ -80,6 +84,6 @@
     
 </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <!-- <script src="/js"></script> -->
+    <script src="/listing/js"></script>
 </body>
 </html>

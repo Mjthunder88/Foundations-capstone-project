@@ -98,5 +98,20 @@ module.exports = {
     .catch((error) => {
         res.status(404).send(error)
     })
+   },
+   createListing: (req, res) => {
+    //    console.log(req.body)
+    let {select, modelInput, mileageInput, priceInput, colorInput, vinInput, descriptionInput, imageInput, yearInput} = req.body
+    sequelize.query(`
+        INSERT INTO listings (make, model, year, mileage, price, color, vin, additional_info, image_url)
+        VALUES ('${select}', '${modelInput}', ${yearInput}, ${mileageInput}, ${priceInput}, '${colorInput}', '${vinInput}', '${descriptionInput}', '${imageInput}');
+    `)
+    .then ( () => {
+        res.status(200).send('Listing has been created!')
+    })
+    .catch(error => {
+        console.log(error)
+        res.status(404).send(`${error} something went wrong`)
+    })
    }
 }
