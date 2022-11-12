@@ -59,8 +59,8 @@ main {
 }
 
 .create-container {
-    height: 400px;
-    width: 400px;
+    height: 450px;
+    width: 450px;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -88,10 +88,16 @@ main {
     color: white;
   }
 
+  .label-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
 footer {
     background-color: #1282A2;
     height: 50px;
-    width: 100vw;
+    width: 99vw;
     padding: 10px;
     position: absolute;
     overflow-x: hidden;

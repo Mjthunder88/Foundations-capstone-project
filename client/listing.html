@@ -24,49 +24,70 @@
     <h2 class="sub-heading">Create Your Listing</h2>
     <section class="create-container">
         <form>
-            <label for="make">Make:</label>
-            <select name="make" id="make-dropdown" >
-                <option value="" disabled selected>Select your option</option>
-                <option value="Toyota">Toyota</option>
-                <option value="Honda">Honda</option>
-                <option value="Nissan">Nissan</option>
-                <option value="Lexus">Lexus</option>
-                <option value="Acura">Acura</option>
-                <option value="BMW">BMW</option>
-                <option value="Ford">Ford</option>
-                <option value="Hyundai">Hyundai</option>
-                <option value="Mazda">Mazda</option>
-                <option value="Subaru">Subaru</option>
-                <option value="Mercedes">Mercedes</option>
-                <option value="McLaren">McLaren</option>
-                <option value="Aston Martin">Aston Martin</option>
-                <option value="Audi">Audi</option>
-                <option value="Ferrari">Ferrari</option>
-                <option value="Doge">Doge</option>
-                <option value="Genesis">Gensis</option>
-                <option value="Mitsubishi">Mitsubishi</option>
-                <option value="Volkswagen">Volkswagen</option>
-                <option value="Chevy">Chevy</option>
-                <option value="Porsche">Porsche</option>
-                <option value="Infiniti">Infiniti</option>
-            </select>
-            <label for="model">Model:</label>
-            <input type="text" placeholder="Enter Here" id="model-input">
-            <label for="year">Year:</label>
-            <input type="number" min="1940" max="2050" step="1" value="2022" id="year-input"/>
-            <label for="mileage">Mileage:</label>
-            <input type="number" min="0" value="0" id="mileage-input"/>
-            <label for="vin">Vin:</label>
-            <input type="text" placeholder="Enter Here" minlength="17" maxlength="17" id="vin-input"/>
-            <label for="color">Color:</label>
-            <input type="text" placeholder="Enter Here" maxlength="255" id="color-input"/>
-            <label for="additional-info">Aditional Info:</label>
-            <input type="text" placeholder="Enter Here" maxlength="255" class="description-box" id="description-input"/>
-            <label for="price">Price:</label>
-            <input type="number" placeholder="Enter Here" min="0" value="0" id="price-input"/>
-            <label for="image">Image:</label>
-            <input type="text" placeholder="Enter Here" id="image-input"/>
-            <button id="form-btn" class="btn">Submit</button>
+            <div class="lable-container">
+
+                <label for="make">Make:</label>
+                <select name="make" id="make-dropdown" >
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Honda">Honda</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Lexus">Lexus</option>
+                    <option value="Acura">Acura</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Ford">Ford</option>
+                    <option value="Hyundai">Hyundai</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Subaru">Subaru</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="McLaren">McLaren</option>
+                    <option value="Aston Martin">Aston Martin</option>
+                    <option value="Audi">Audi</option>
+                    <option value="Ferrari">Ferrari</option>
+                    <option value="Doge">Doge</option>
+                    <option value="Genesis">Gensis</option>
+                    <option value="Mitsubishi">Mitsubishi</option>
+                    <option value="Volkswagen">Volkswagen</option>
+                    <option value="Chevy">Chevy</option>
+                    <option value="Porsche">Porsche</option>
+                    <option value="Infiniti">Infiniti</option>
+                </select>
+            </div>
+            <div class="label-container">
+                <label for="model">Model:</label>
+                <input type="text" placeholder="Enter Here" id="model-input">
+            </div>
+            <div class="lable-container">
+                <label for="year">Year:</label>
+                <input type="number" min="1940" max="2050" step="1" value="2022" id="year-input"/>
+            </div>
+            <div class="lable-container">
+                <label for="mileage">Mileage:</label>
+                <input type="number" min="0" value="0" id="mileage-input"/>
+            </div>
+            <div class="lable-container">
+                <label for="vin">Vin:</label>
+                <input type="text" placeholder="Enter Here" minlength="17" maxlength="17" id="vin-input"/>
+            </div>
+            <div class="lable-container">
+                <label for="color">Color:</label>
+                <input type="text" placeholder="Enter Here" maxlength="255" id="color-input"/>
+            </div>
+            <div class="label-container">
+                <label for="additional-info">Aditional Info:</label>
+                <input type="text" placeholder="Enter Here" maxlength="255" class="description-box" id="description-input"/>
+            </div>
+            <div class="label-container">
+                <label for="price">Price:</label>
+                <input type="number" placeholder="Enter Here" min="0" value="0" id="price-input"/>
+            </div>
+            <div class="label-container">
+                <label for="image">Image:</label>
+                <input type="text" placeholder="Enter Here" id="image-input"/>
+            </div>
+            <div class="label-container">
+                <button id="form-btn" class="btn">Submit</button>
+            </div>
         </form>
     </section>
 
