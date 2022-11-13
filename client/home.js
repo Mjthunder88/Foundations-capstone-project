@@ -2,6 +2,14 @@ let listingContainer = document.getElementById('listings')
 let main = document.querySelector('main')
 let listingForm = document.querySelector('form')
 
+// Modal section
+const modal = document.getElementById('modal')
+let openModal = document.querySelectorAll('offer-btns')
+const closeModal = document.getElementById('close-modal-btn')
+const cancelModal = document.getElementById('close-modal')
+
+let btn = document.querySelector('.open')
+
 
 function allListings () {
     // event.preventDefault()
@@ -10,7 +18,7 @@ function allListings () {
     axios.get('http://localhost:5002/listings') 
     .then (res => {
         let listings = res.data
-        console.log(listings)
+        // console.log(listings)
         let rowDiv = null
         for (let i = 0; i < listings.length; i++) {
             if (i % 2 === 0) {
@@ -42,7 +50,7 @@ function createCard (listing) {
         <ul>Color: ${listing.color}</ul>
         <ul>Vin: ${listing.vin}</ul>
         <p>Additional info: ${listing.additional_info}</p>
-        <button id ="offer-btn" class= "offer-btns"><span>Make An Offer!</span></button>
+        <button class= "offer-btns">Make An Offer!</button>
         </div>
         </div>`
         return listingCard
@@ -65,3 +73,14 @@ function getMakes () {
 
 // getMakes() 
 allListings()
+
+btn.addEventListener('click', () => {
+    modal.showModal();
+})
+
+closeModal.addEventListener('submit', () => {
+    modal.close();
+})
+cancelModal.addEventListener('click', () => {
+    modal.close();
+})

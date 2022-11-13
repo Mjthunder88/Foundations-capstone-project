@@ -112,6 +112,55 @@ main {
     color: white;
   }
 
+  /* Modal */
+
+  .modal {
+    max-width: 300px;
+    padding: 40px;
+    border: 0;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .modal::backdrop {
+    background: linear-gradient(45deg, #1282A2, grey);
+    opacity: .4;
+  }
+
+  .form-modal {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+ label {
+   text-align: left;
+   width: 150px;
+   display:  inline-block; 
+ }
+ 
+ .modal-input {
+  margin-left: 3px;
+ }
+
+
+ form-modal, button {
+  color: black;
+  font-size: 12px;
+  margin-top: 10px;
+  text-decoration: none;
+  border: 2px solid #1282A2;
+  padding: 5px 5px;
+  overflow: hidden;
+  transition: 1s all ease;
+  z-index: 0;
+  border-radius: 5px;
+ }
+
+ form-modal, button:hover {
+  background-color: #1282A2;
+  color: white;
+ }
+
 
   /* Footer */
 

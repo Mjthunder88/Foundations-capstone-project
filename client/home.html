@@ -22,7 +22,17 @@
 </header>
 <main>
     <h2 class="main-header">Listings</h2>
-
+    <button class="open">open</button>
+    <dialog class="modal" id="modal">
+        <h2>Submit Your Offer</h2>
+        <form id="modal-submit" method="dialog" class="form-modal">
+            <label for="username">Username: </label><input type="text" placeholder="Enter here" class="modal-input"/>
+            <label for="email">Email: </label><input type="text" placeholder="Enter here" class="modal-input"/>
+            <label for="price">Price: </label><input type="number" placeholder="0" class="modal-input"/>
+            <button id="close-modal-btn">Submit Offer</button>
+            <button id="close-modal">Cancel</button>
+        </form>
+    </dialog>
 </main>
 <footer>
 <div>
