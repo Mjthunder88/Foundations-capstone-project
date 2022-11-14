@@ -43,6 +43,12 @@ module.exports = {
             id SERIAL PRIMARY KEY,
             name VARCHAR(255) UNIQUE NOT NULL
         );
+        CREATE TABLE offers (
+            id SERIAL PRIMARY KEY,
+            username VARCHAR(255) NOT NULL UNIQUE,
+            email VARCHAR(255) NOT NULL UNIQUE,
+            price INT NOT NULL 
+          );
         INSERT INTO makes (name) 
         VALUES ('Acura'),
         ('Alfa Romeo'),
@@ -112,6 +118,20 @@ module.exports = {
     .catch(error => {
         console.log(error)
         res.status(404).send(`${error} something went wrong`)
+    })
+   },
+   makeOffer: (req, res) => {
+    let {userNameInput, emailInput, priceInput} =req.body
+    
+    sequelize.query(`
+        INSERT INTO offers (username, email, price)
+        VALUES ("${userNameInput}", "${emailInput}", ${priceInput})
+    `)
+    .then( () => {
+        res.status(200).send('Your offer has been submitted!')
+    })
+    .catch(error => {
+        res.status(404).send(`${error}`)
     })
    }
 }

@@ -10,7 +10,7 @@ const cancelModal = document.getElementById('close-modal')
 
 
 function modalFunc (e) {
-    console.log(e.target.getAttribute('listingId'))
+    // console.log(e.target.getAttribute('listingId'))
     modal.showModal()
 }
 
@@ -28,6 +28,9 @@ function allListings () {
                 rowDiv.classList.add('row-container')
                 let currentCard = createCard(listings[i])
                 rowDiv.innerHTML += currentCard
+                if (i === listings.length - 1) {
+                    main.appendChild(rowDiv)
+                }
             } else {
                 let currentCard = createCard(listings[i])
                 rowDiv.innerHTML += currentCard
@@ -72,11 +75,32 @@ function getMakes () {
     .catch((error) => console.log(error))
 }
 
+function makeOffer () {
+    let userNameInput = document.getElementById('username-offer')
+    let emailInput = document.getElementById('email-offer')
+    let priceInput = document.getElementById('price-offer')
+
+    let bodyObj = {
+        userNameInput: userNameInput.value,
+        emailInput: emailInput.value,
+        priceInput: priceInput.value
+    }
+
+    axios.post('http://localhost:5002/offer', bodyObj)
+    .then(res => {
+        alert('Your offer has been submited!')
+    })
+    .catch(error => {
+        console.log(error)
+    })
+}
+
 // getMakes() 
 allListings()
 
 closeModal.addEventListener('submit', () => {
     modal.close();
+    closeModal.addEventListener('submit', makeOffer)
 })
 cancelModal.addEventListener('click', () => {
     modal.close();
