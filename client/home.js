@@ -4,23 +4,25 @@ let listingForm = document.querySelector('form')
 
 // Modal section
 const modal = document.getElementById('modal')
-let openModal = document.querySelectorAll('offer-btns')
+const openModal = document.querySelectorAll('offer-btns')
 const closeModal = document.getElementById('close-modal-btn')
 const cancelModal = document.getElementById('close-modal')
 
-let btn = document.querySelector('.open')
+
+function modalFunc (e) {
+    console.log(e.target.getAttribute('listingId'))
+    modal.showModal()
+}
 
 
 function allListings () {
-    // event.preventDefault()
-
 
     axios.get('http://localhost:5002/listings') 
     .then (res => {
         let listings = res.data
-        // console.log(listings)
         let rowDiv = null
         for (let i = 0; i < listings.length; i++) {
+            // console.log(i)
             if (i % 2 === 0) {
                 rowDiv = document.createElement('div')
                 rowDiv.classList.add('row-container')
@@ -38,19 +40,18 @@ function allListings () {
 }
 
 function createCard (listing) {
-    // listingContainer.innerHTML = ''
         let listingCard = `<div class = "card-row">
         <div class = "card">
         <h3>$${listing.price}</h3>
         <h3>${listing.make}, ${listing.model}</h3>
-        <image src= "${listing.image_url}" alt="Picture_of_a_car"/>
+        <image src= "${listing.image_url}" alt="Picture_of_a_car" class="listing-img"/>
         <h3>Features & Specs</h3>
         <ul>Year: ${listing.year}</ul>
         <ul>Mileage: ${listing.mileage}</ul>
         <ul>Color: ${listing.color}</ul>
         <ul>Vin: ${listing.vin}</ul>
         <p>Additional info: ${listing.additional_info}</p>
-        <button class= "offer-btns">Make An Offer!</button>
+        <button listingId="${listing.id}" onclick="modalFunc(event)" class= "offer-btns">Make An Offer!</button>
         </div>
         </div>`
         return listingCard
@@ -73,10 +74,6 @@ function getMakes () {
 
 // getMakes() 
 allListings()
-
-btn.addEventListener('click', () => {
-    modal.showModal();
-})
 
 closeModal.addEventListener('submit', () => {
     modal.close();

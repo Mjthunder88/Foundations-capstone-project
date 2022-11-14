@@ -100,5 +100,6 @@ footer {
     width: 99vw;
     padding: 10px;
     position: absolute;
+    bottom: 0px;
     overflow-x: hidden;
   }
