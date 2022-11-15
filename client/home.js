@@ -9,6 +9,12 @@ const closeModal = document.getElementById('close-modal-btn')
 const cancelModal = document.getElementById('close-modal')
 const offerForm = document.getElementById('modal-submit')
 
+// Footer section
+
+const link1 = document.getElementById('social-links-1')
+const link2= document.getElementById('social-links-2')
+const link3 = document.getElementById('social-links-3')
+
 
 function modalFunc (e) {
     // console.log(e.target.getAttribute('listingId'))
@@ -110,3 +116,12 @@ offerForm.addEventListener('submit', makeOffer)
 cancelModal.addEventListener('click', () => {
     modal.close();
 })
+
+function alertFunc () {
+    alert('Under maintenance')
+}
+
+
+link1.addEventListener('click',alertFunc)
+link2.addEventListener('click',alertFunc)
+link3.addEventListener('click',alertFunc)

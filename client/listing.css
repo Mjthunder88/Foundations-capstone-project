@@ -103,3 +103,39 @@ footer {
     bottom: 0px;
     overflow: hidden;
   }
+
+  .fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fa:hover {
+    background-color: black;
+    cursor: pointer;
+
+  }
+
+  .footer-links {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+  .footer-links:hover {
+    background-color: black;
+    cursor: pointer;
+  }

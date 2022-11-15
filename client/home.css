@@ -114,6 +114,7 @@ main {
   .offer-btns:hover{
     background-color: #1282A2;
     color: white;
+    cursor: pointer;
   }
 
   .listing-img {
@@ -174,6 +175,7 @@ main {
  form-modal, button:hover {
   background-color: #1282A2;
   color: white;
+  cursor: pointer;
  }
 
 
@@ -181,11 +183,47 @@ main {
 
   footer {
     background-color: #1282A2;
-    height: 50px;
+    height: 100px;
     width: 100%;
     padding: 10px;
     position: absolute;
     overflow: hidden;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 50px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fa:hover {
+    background-color: black;
+    cursor: pointer;
+
+  }
+
+  .footer-links {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+  .footer-links:hover {
+    background-color: black;
+    cursor: pointer;
   }
 
   /* For Phones */
