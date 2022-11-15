@@ -10,7 +10,7 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
     }
 }) 
 
-// Need to add a image column for the listings database 
+
 module.exports = {
     createTables: (req, res) => {
         sequelize.query(`
@@ -106,7 +106,6 @@ module.exports = {
     })
    },
    createListing: (req, res) => {
-    //    console.log(req.body)
     let {select, modelInput, mileageInput, priceInput, colorInput, vinInput, descriptionInput, imageInput, yearInput} = req.body
     sequelize.query(`
         INSERT INTO listings (make, model, year, mileage, price, color, vin, additional_info, image_url)
