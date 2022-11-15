@@ -125,7 +125,7 @@ module.exports = {
     
     sequelize.query(`
         INSERT INTO offers (username, email, price)
-        VALUES ("${userNameInput}", "${emailInput}", ${priceInput})
+        VALUES ('${userNameInput}', '${emailInput}', ${priceInput});
     `)
     .then( () => {
         res.status(200).send('Your offer has been submitted!')

@@ -7,6 +7,7 @@ const modal = document.getElementById('modal')
 const openModal = document.querySelectorAll('offer-btns')
 const closeModal = document.getElementById('close-modal-btn')
 const cancelModal = document.getElementById('close-modal')
+const offerForm = document.getElementById('modal-submit')
 
 
 function modalFunc (e) {
@@ -75,7 +76,8 @@ function getMakes () {
     .catch((error) => console.log(error))
 }
 
-function makeOffer () {
+function makeOffer (e) {
+    e.preventDefault()
     let userNameInput = document.getElementById('username-offer')
     let emailInput = document.getElementById('email-offer')
     let priceInput = document.getElementById('price-offer')
@@ -86,22 +88,25 @@ function makeOffer () {
         priceInput: priceInput.value
     }
 
+    modal.close()
     axios.post('http://localhost:5002/offer', bodyObj)
     .then(res => {
-        alert('Your offer has been submited!')
+        alert(res.data)
     })
     .catch(error => {
         console.log(error)
     })
+
+    userNameInput.value =''
+    emailInput.value = ''
+    priceInput.value = ''
 }
 
 // getMakes() 
 allListings()
 
-closeModal.addEventListener('submit', () => {
-    modal.close();
-    closeModal.addEventListener('submit', makeOffer)
-})
+offerForm.addEventListener('submit', makeOffer)
+
 cancelModal.addEventListener('click', () => {
     modal.close();
 })
