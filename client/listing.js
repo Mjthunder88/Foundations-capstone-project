@@ -28,7 +28,7 @@ function createListing (e) {
     // console.log(bodyObj)
    
     
-    axios.post('http://localhost:5002/create', bodyObj)
+    axios.post('/create', bodyObj)
     .then(res => {
         console.log(res.data)
         alert(res.data)

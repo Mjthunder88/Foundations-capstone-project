@@ -18,7 +18,7 @@ function modalFunc (e) {
 
 function allListings () {
 
-    axios.get('http://localhost:5002/listings') 
+    axios.get('/listings') 
     .then (res => {
         let listings = res.data
         let rowDiv = null
@@ -62,7 +62,7 @@ function createCard (listing) {
 }
 
 function getMakes () {
-    axios.get('http://localhost:5002/makes')
+    axios.get('/makes')
     .then(res => {
         let makes = res.data
         makes.array.forEach(make => {
@@ -89,7 +89,7 @@ function makeOffer (e) {
     }
 
     modal.close()
-    axios.post('http://localhost:5002/offer', bodyObj)
+    axios.post('/offer', bodyObj)
     .then(res => {
         alert(res.data)
     })
