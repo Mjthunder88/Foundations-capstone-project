@@ -11,9 +11,9 @@ const offerForm = document.getElementById('modal-submit')
 
 // Footer section
 
-const link1 = document.getElementById('social-links-1')
-const link2= document.getElementById('social-links-2')
-const link3 = document.getElementById('social-links-3')
+const link1 = document.getElementById('social-link-1')
+const link2= document.getElementById('social-link-2')
+const link3 = document.getElementById('social-link-3')
 
 
 function modalFunc (e) {
@@ -97,7 +97,14 @@ function makeOffer (e) {
     modal.close()
     axios.post('/offer', bodyObj)
     .then(res => {
-        alert(res.data)
+        // alert(res.data)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Your offer has been submitted!',
+            showConfirmButton: false,
+            timer: 1500
+          })
     })
     .catch(error => {
         console.log(error)
@@ -117,7 +124,8 @@ cancelModal.addEventListener('click', () => {
     modal.close();
 })
 
-function alertFunc () {
+function alertFunc (event) {
+    event.preventDefault()
     alert('Under maintenance')
 }
 
@@ -125,3 +133,4 @@ function alertFunc () {
 link1.addEventListener('click',alertFunc)
 link2.addEventListener('click',alertFunc)
 link3.addEventListener('click',alertFunc)
+
