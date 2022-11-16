@@ -97,7 +97,6 @@ function makeOffer (e) {
     modal.close()
     axios.post('/offer', bodyObj)
     .then(res => {
-        // alert(res.data)
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -126,7 +125,13 @@ cancelModal.addEventListener('click', () => {
 
 function alertFunc (event) {
     event.preventDefault()
-    alert('Under maintenance')
+    Swal.fire({
+        position: 'center',
+        icon: 'Error!',
+        title: 'Under Maintenance',
+        showConfirmButton: false,
+        timer: 2000
+    })
 }
 
 

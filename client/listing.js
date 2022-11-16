@@ -30,9 +30,16 @@ function createListing (e) {
     
     axios.post('/create', bodyObj)
     .then(res => {
-        console.log(res.data)
-        alert(res.data)
-
+        setTimeout( () => {
+            location.href = "/"
+        }, 3000)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Your listing has been created!',
+            showConfirmButton: false,
+            timer: 2000
+        })
     })
     .catch(error =>  {
         console.log(error)
