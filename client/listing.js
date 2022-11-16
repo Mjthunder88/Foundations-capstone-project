@@ -56,3 +56,19 @@ function createListing (e) {
 }
 
 listingForm.addEventListener('submit', createListing)
+
+function alertFunc (event) {
+    event.preventDefault()
+    Swal.fire({
+        position: 'center',
+        icon: 'info',
+        title: 'Under Maintenance',
+        showConfirmButton: false,
+        timer: 2000
+    })
+}
+
+
+link1.addEventListener('click',alertFunc)
+link2.addEventListener('click',alertFunc)
+link3.addEventListener('click',alertFunc)
