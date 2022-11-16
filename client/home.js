@@ -127,7 +127,7 @@ function alertFunc (event) {
     event.preventDefault()
     Swal.fire({
         position: 'center',
-        icon: 'Error!',
+        icon: 'info',
         title: 'Under Maintenance',
         showConfirmButton: false,
         timer: 2000

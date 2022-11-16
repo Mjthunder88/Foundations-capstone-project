@@ -294,5 +294,29 @@ main {
     box-shadow: 4px 4px 4px 4px #1282A2;
   }
 
+  .footer-links {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    transition: .5s;
+    border-radius: 10px;
+  }
+
+  .footer-links:hover {
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    transition: .5s;
+  }
+
 
   }
