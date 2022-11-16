@@ -1,5 +1,9 @@
 let listingForm = document.querySelector('form')
 
+const link1 = document.getElementById('social-link-1')
+const link2= document.getElementById('social-link-2')
+const link3 = document.getElementById('social-link-3')
+
 function createListing (e) {
     e.preventDefault()
 
