@@ -67,20 +67,20 @@ function createCard (listing) {
         return listingCard
 }
 
-function getMakes () {
-    axios.get('/makes')
-    .then(res => {
-        let makes = res.data
-        makes.array.forEach(make => {
-            const option = document.createElement('option')
-            option.setAttribute('value', make['make_id'])
-            option.textContent = make.name
-            select.appendChild(option)
-        });
+// function getMakes () {
+//     axios.get('/makes')
+//     .then(res => {
+//         let makes = res.data
+//         makes.array.forEach(make => {
+//             const option = document.createElement('option')
+//             option.setAttribute('value', make['make_id'])
+//             option.textContent = make.name
+//             select.appendChild(option)
+//         });
 
-    })
-    .catch((error) => console.log(error))
-}
+//     })
+//     .catch((error) => console.log(error))
+// }
 
 function makeOffer (e) {
     e.preventDefault()
@@ -94,21 +94,21 @@ function makeOffer (e) {
         priceInput: priceInput.value
     }
 
-    modal.close()
     axios.post('/offer', bodyObj)
     .then(res => {
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Your offer has been submitted!',
+            title: `${res.data}`,
             showConfirmButton: false,
             timer: 1500
-          })
+        })
     })
     .catch(error => {
         console.log(error)
     })
-
+    modal.close()
+    
     userNameInput.value =''
     emailInput.value = ''
     priceInput.value = ''
